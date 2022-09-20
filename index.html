@@ -333,7 +333,7 @@
                         <span class="telegram-name">
                             Підпишіться на розсилку
                         </span>
-                        <input class="telegram-form" type="text" id="telegram-mail" name="telegram-male" placeholder="E-mail">
+                        <input class="telegram-form" type="email" id="telegram-mail" name="telegram-male" placeholder="E-mail">
                     </label>
                     <button class="telegram-btn" type="submit">
                         Підписатися
@@ -351,31 +351,37 @@
         <div class="modal">
             <h2 class="modal-name">Залиште свої дані, ми вам передзвонимо</h2>
             <button data-modal-close class="modal-btn" type="button">
-                <svg width="11" height="11">
+                <svg class="modal-btn-icon" width="11" height="11">
                     <use href="./images/icons.svg#close"></use>
                 </svg>
             </button>
             <form class="register-form" name="register-form" autocomplete="on">
                 <label class="form" for="user-name">
                     <span class="user">Ім'я</span>
-                    <input class="form-box" type="text" id="user-name" name="user-name" placeholder="">
-                    <svg class="user-icon" width="12" height="12">
-                        <use href="./images/icons.svg#user-name"></use>
-                    </svg>
+                    <div class="box-input">
+                        <input class="form-box" type="text" id="user-name" name="user-name" placeholder="">
+                        <svg class="user-icon" width="12" height="12">
+                            <use href="./images/icons.svg#user-name"></use>
+                        </svg>
+                    </div>
                 </label>
                 <label class="form" for="user-tel">
                     <span class="user">Телефон</span>
-                    <input class="form-box" type="text" id="user-tel" name="user-tel" placeholder="">
-                    <svg class="user-icon" width="13" height="13">
-                        <use href="./images/icons.svg#user-tel"></use>
-                    </svg>
+                    <div class="box-input">
+                        <input class="form-box" type="text" id="user-tel" name="user-tel" placeholder="">
+                        <svg class="user-icon" width="13" height="13">
+                            <use href="./images/icons.svg#user-tel"></use>
+                        </svg>
+                    </div>
                 </label>
                 <label class="form" for="user-mail">
                     <span class="user">Пошта</span>
-                    <input class="form-box" type="text" id="user-mail" name="user-mail" placeholder="">
-                    <svg class="user-icon" width="15" height="12">
-                        <use href="./images/icons.svg#user-mail"></use>
-                    </svg>
+                    <div class="box-input">
+                        <input class="form-box" type="text" id="user-mail" name="user-mail" placeholder="">
+                        <svg class="user-icon" width="15" height="12">
+                            <use href="./images/icons.svg#user-mail"></use>
+                        </svg>
+                    </div>
                 </label>
                 <label class="form form-com" for="commit">
                     <span class="user">Коментар</span>

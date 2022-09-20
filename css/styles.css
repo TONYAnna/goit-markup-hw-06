@@ -641,13 +641,6 @@ ul {
     color: var(--accent-txt-cl);
 }
 
-.address-group {
-    margin-right: 70px;
-}
-
-.join {
-    margin-right: 93px;
-}
 
 .join-name {
     width: 116px;
@@ -700,6 +693,7 @@ ul {
 .telegram-form {
     width: 358px;
     height: 50px;
+    color: var(--light-txt-cl);
 
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -832,6 +826,15 @@ ul {
     background: var(--light-txt-cl);
     border: 1px solid rgba(0, 0, 0, 0.1);
     cursor: pointer;
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-btn:hover .modal-btn-icon,
+.modal-btn:focus .modal-btn-icon {
+    fill: var(--accent-txt-cl);
 }
 
 .is-hidden {
@@ -854,7 +857,6 @@ ul {
 .form {
     margin-bottom: 10px;
     display: block;
-    position: relative;
 
     transition-property: border-color;
     transition-duration: 250ms;
@@ -868,8 +870,6 @@ ul {
 .form-box {
     width: 448px;
     height: 40px;
-    left: 576px;
-    top: 382px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     padding-left: 42px;
@@ -877,6 +877,7 @@ ul {
 
 .form-box:focus {
     border-color: var(--accent-txt-cl);
+    outline: none;
 }
 
 .form:focus-within .user-icon {
@@ -889,8 +890,6 @@ ul {
     box-sizing: border-box;
     width: 448px;
     height: 120px;
-    left: 576px;
-    top: 518px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     resize: none;
@@ -903,6 +902,7 @@ ul {
 
 .form-commit:focus {
 border-color: var(--accent-txt-cl);
+outline: none;
 }
 
 
@@ -940,7 +940,8 @@ textarea::placeholder {
     opacity: 1;
 }
 
-.checkbox:checked + .checkbox-icon .checkbox-use {
+.checkbox:checked + .checkbox-icon .checkbox-use,
+.checkbox-icon:focus .checkbox-use {
     opacity: 0;
 }
 
@@ -948,7 +949,8 @@ textarea::placeholder {
     opacity: 0;
 }
 
-.checkbox:checked + .checkbox-icon .check-use {
+.checkbox:checked + .checkbox-icon .check-use,
+.checkbox-icon:focus .check-use {
     opacity: 1;
 }
 
@@ -957,11 +959,16 @@ textarea::placeholder {
     color: var(--accent-txt-cl);
 }
 
+.box-input {
+    width: 448px;
+    height: 40px;
+    position: relative;
+}
 
 .user-icon {
     position: absolute;
+    right: 420px;
     bottom: 14px;
-    right: 421px;
 }
 
 .submit-btn {
